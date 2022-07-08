@@ -32,8 +32,8 @@ const Game = () => {
     <div>
         {winnerGame(squares) || resetGame ? <button onClick={handReset}>Reset game</button>:''}
         <Board handlePlay={onHandlePlay} squares={squares} winner={resultPlay?.playin}/>
-        <p>{winnerGame(squares) && `Người chơi ${resultPlay?.player+1} chiến thắng`}</p>
-        <p>{winnerGame(squares) && `Ô ${resultPlay?.playin}! `}</p>
+        <p>{winnerGame(squares) && `Người chơi ${resultPlay?.player} chiến thắng`}</p>
+        <p>{winnerGame(squares) && `Ô ${resultPlay?.playin+1}! `}</p>
     </div>
   )
 }
