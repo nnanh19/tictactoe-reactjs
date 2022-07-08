@@ -9,9 +9,15 @@ const Game = () => {
 
     const onHandlePlay = (index) =>{
         const squares2 = [...squares]
-        squares2[index] = xPlayer ? 'X' : 'O'
-        setXPlayer(!xPlayer)
-        return setSquares(squares2)
+
+        if(squares2[index] === null){
+            squares2[index] = xPlayer ? 'X' : 'O'
+            setXPlayer(!xPlayer)
+            setSquares(squares2)
+            
+        }if(winnerGame(squares2)){
+            console.log(squares2,'index');
+        }
     }
     
     const handReset = () => {

@@ -12,7 +12,6 @@ export const winnerGame = (square) =>{
 
     for (let index = 0; index < lines.length; index++) {
         const [a,b,c] = lines[index]
-        console.log(a,b,c);
         if(square[a] && square[a] === square[b] && square[a] === square[c]){
             return square[a]
         }
