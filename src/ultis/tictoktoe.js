@@ -13,7 +13,7 @@ export const winnerGame = (square) =>{
     for (let index = 0; index < lines.length; index++) {
         const [a,b,c] = lines[index]
         if(square[a] && square[a] === square[b] && square[a] === square[c]){
-            return {player:square[a], playin: [a,b,c]}
+            return {player:square[a], playin: [parseInt(a)+1,parseInt(b)+1,parseInt(c)+1]}
         }
     }
     return null
