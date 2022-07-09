@@ -26,6 +26,7 @@ const Game = () => {
   
     const handReset = () => {
         setSquares(Array(9).fill(null))
+        setResetGame(false)
     }
     const resultPlay = winnerGame(squares)
   return (
